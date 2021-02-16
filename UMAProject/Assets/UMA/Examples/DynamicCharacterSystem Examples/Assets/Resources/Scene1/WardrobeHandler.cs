@@ -12,7 +12,7 @@ namespace UMA.CharacterSystem.Examples
         public string Slot;
 		public string theText;
 
-		private Color32 LoadedColor = new Color32(0, 128, 0, 255);
+		private Color32 LoadedColor = new Color32(0, 0, 0, 255);
 		private Color32 UnloadedColor = new Color32(128, 0, 0, 255);
 
 		public bool isReady
@@ -47,14 +47,15 @@ namespace UMA.CharacterSystem.Examples
 			}
 			else
 			{
-				txt.text = "(L)" + theText;
+				txt.text = theText; // "(L)" + theText;
 				txt.color = LoadedColor;
 			}
-
+      /*
 			if (txt.text.Length > 20)
 			{
 				txt.text = txt.text.Substring(0, 20);
 			}
+      */
 		}
 
 		public void Setup(DynamicCharacterAvatar avatar, UMATextRecipe recipe, string slot, string text)
